@@ -1,0 +1,26 @@
+{
+  "name": "Dev Kaushal — Command Centre",
+  "short_name": "DEV.K",
+  "description": "Personal command centre of Dev Kaushal — digital marketer and designer.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0b171f",
+  "theme_color": "#0b171f",
+  "icons": [
+    {
+      "src": "assets/img/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+# Dev Kaushal — Command Centre
+User-agent: *
+Allow: /
+
+# No tracking scripts are loaded by this site.
+Sitemap: https://dev.digitalindiahub.com/sitemap.xml

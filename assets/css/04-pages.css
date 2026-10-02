@@ -1,0 +1,330 @@
+/* ===========================================================================
+   04 — PAGE COMPOSITIONS
+   ---------------------------------------------------------------------------
+   Layout intent per destination. Additions here should stay specific: anything
+   reused twice belongs in 03-components.css.
+   =========================================================================== */
+
+/* ===========================================================================
+   01 COMMAND CENTER
+   =========================================================================== */
+
+/* Focus modules sit in a ruled three-up grid on desktop. */
+.focus-grid {
+  display: grid;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr));
+}
+@media (min-width: 74rem) {
+  .focus-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* Companion note + identity slot */
+.companion-note { display: grid; gap: var(--space-s); align-content: space-between; padding: clamp(1.1rem, 2vw, 1.75rem); }
+.companion-note__quote {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.6vw, 1.9rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  color: var(--paper);
+}
+.companion-note__meta { display: flex; flex-direction: column; gap: 0.6rem; }
+
+/* Quick routes — secondary command modules */
+.routes {
+  display: grid;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+}
+@media (min-width: 74rem) {
+  .routes { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
+.route {
+  position: relative;
+  display: grid;
+  gap: 0.5rem;
+  align-content: space-between;
+  padding: 1rem 1rem 1rem 1.15rem;
+  background: var(--panel);
+  color: inherit;
+  text-decoration: none;
+  min-height: 7.5rem;
+  transition: background var(--dur-s) var(--ease-out);
+}
+.route::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 1rem;
+  bottom: 1rem;
+  width: 1px;
+  background: var(--line-strong);
+  transition: background var(--dur-s) var(--ease-out), width var(--dur-s) var(--ease-out);
+}
+.route:hover,
+.route:focus-visible { background: var(--panel-raised); color: inherit; }
+.route:hover::before,
+.route:focus-visible::before { background: var(--signal); width: 2px; }
+.route__top { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; color: var(--signal-ink); }
+.route__label {
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--paper);
+}
+.route__meta { font-family: var(--font-mono); font-size: 0.5625rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--slate-dim); }
+.route__blurb { font-size: 0.75rem; color: var(--slate); line-height: 1.5; }
+
+/* Dashboard stat strip */
+.stat-strip {
+  display: grid;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+@media (min-width: 40rem) {
+  .stat-strip { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (min-width: 64rem) {
+  .stat-strip { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
+.stat {
+  display: grid;
+  gap: 0.3rem;
+  padding: 0.9rem 1rem;
+  background: var(--panel-alt);
+}
+.stat__label { font-family: var(--font-mono); font-size: 0.5625rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--slate-dim); }
+.stat__value { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--paper); line-height: 1; font-variant-numeric: tabular-nums; }
+.stat__note { font-size: 0.6875rem; color: var(--slate-dim); }
+
+/* Latest-signal list (recent activity across modules) */
+.signal-list { display: grid; gap: 1px; background: var(--line-soft); border: 1px solid var(--line-soft); }
+.signal-list__row {
+  display: grid;
+  grid-template-columns: 5.5rem minmax(0, 1fr) auto;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.7rem 0.9rem;
+  background: var(--panel);
+  font-size: 0.8125rem;
+  color: var(--slate);
+  text-decoration: none;
+}
+.signal-list__row:hover { background: var(--panel-raised); color: var(--sand); }
+.signal-list__date { font-family: var(--font-mono); font-size: 0.5625rem; letter-spacing: 0.12em; color: var(--slate-dim); }
+.signal-list__title { color: var(--sand); }
+.signal-list__cat { font-family: var(--font-mono); font-size: 0.5625rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--signal-ink); }
+@media (max-width: 40rem) {
+  .signal-list__row { grid-template-columns: minmax(0, 1fr) auto; }
+  .signal-list__date { grid-column: 1 / -1; order: -1; }
+}
+
+/* ===========================================================================
+   02 STORY MODE
+   =========================================================================== */
+.story-lead { display: grid; gap: var(--space-m); }
+
+/* Sidebar beside the chapter timeline (Story Mode). */
+.story-rail { display: block; }
+.story-rail > * + * { margin-top: var(--space-s); }
+@media (min-width: 62rem) {
+  .story-rail { position: sticky; top: 5.75rem; }
+}
+.story-headline {
+  font-family: var(--font-display);
+  font-size: var(--step-5);
+  font-weight: 800;
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+  color: var(--paper);
+}
+.story-headline span { display: block; }
+.story-headline span:last-child { color: var(--sand); }
+
+.mindset {
+  display: grid;
+  gap: 0.75rem;
+  padding: clamp(1.1rem, 2vw, 1.6rem);
+  border: 1px solid var(--line);
+  border-left: 2px solid var(--signal);
+  background: var(--panel-alt);
+}
+.mindset blockquote {
+  font-family: var(--font-display);
+  font-size: var(--step-2);
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--sand);
+  letter-spacing: -0.005em;
+}
+.trait-row { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+.next-grid { display: grid; gap: 1px; background: var(--line); border: 1px solid var(--line); grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); }
+.next-card { background: var(--panel); padding: 1rem; display: grid; gap: 0.35rem; }
+.next-card__label { font-family: var(--font-display); font-size: 0.875rem; font-weight: 700; letter-spacing: 0.06em; color: var(--paper); }
+.next-card__detail { font-size: 0.8125rem; color: var(--slate); }
+
+/* ===========================================================================
+   03 / CASE FILES — MISSIONS
+   =========================================================================== */
+.mission-grid {
+  display: grid;
+  gap: clamp(0.75rem, 1.4vw, 1.25rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+}
+
+/* ===========================================================================
+   04 SKILL TREE
+   =========================================================================== */
+.tree-layout { display: grid; gap: var(--space-m); }
+.branch-list { display: grid; }
+
+/* ===========================================================================
+   05 ARSENAL / TOOLKIT
+   =========================================================================== */
+.tool-group { display: grid; gap: var(--space-s); scroll-margin-top: 6rem; }
+.tool-grid {
+  display: grid;
+  gap: clamp(0.6rem, 1.2vw, 1rem);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16.5rem), 1fr));
+}
+.group-nav { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+
+/* ===========================================================================
+   07 LEARNING LAB / LOG
+   =========================================================================== */
+.currently-learning {
+  display: grid;
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--signal-line);
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+}
+.cl-card { background: linear-gradient(180deg, var(--signal-softer), var(--panel) 70%); padding: 1rem; display: grid; gap: 0.5rem; align-content: start; }
+.cl-card__label { font-family: var(--font-display); font-size: 0.9375rem; font-weight: 700; letter-spacing: 0.04em; color: var(--paper); }
+.cl-card__detail { font-size: 0.8125rem; color: var(--slate); }
+.cl-card__progress { display: flex; flex-wrap: wrap; gap: 0.3rem; }
+.cl-card__progress span { font-family: var(--font-mono); font-size: 0.5625rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--moss); border: 1px solid rgba(124, 154, 106, 0.34); padding: 0.15rem 0.4rem; }
+.cl-head { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: var(--space-s); padding: 0.85rem 1rem; background: var(--panel-alt); border-bottom: 1px solid var(--line); }
+
+.log-grid { display: grid; gap: clamp(0.6rem, 1.2vw, 1rem); grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); }
+
+/* ===========================================================================
+   08 HQ
+   =========================================================================== */
+.hq-layout { display: grid; gap: clamp(1rem, 2vw, 2rem); }
+@media (min-width: 62rem) {
+  .hq-layout { grid-template-columns: minmax(0, 1fr) minmax(0, 21rem); align-items: start; }
+}
+.hq-aside { display: grid; gap: var(--space-s); }
+@media (min-width: 62rem) {
+  .hq-aside { position: sticky; top: 5.75rem; }
+}
+
+/* ===========================================================================
+   CONTACT
+   =========================================================================== */
+.contact-layout { display: grid; gap: clamp(1rem, 2vw, 2rem); }
+@media (min-width: 56rem) {
+  .contact-layout { grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); align-items: start; }
+}
+
+/* ===========================================================================
+   404 — SIGNAL LOST
+   =========================================================================== */
+.lost {
+  display: grid;
+  gap: var(--space-m);
+  place-content: center start;
+  min-height: min(62vh, 34rem);
+  padding: clamp(1.5rem, 4vw, 3rem);
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(90% 80% at 8% 10%, rgba(200, 106, 56, 0.12), transparent 62%),
+    var(--panel);
+}
+.lost__code {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 16vw, 9rem);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  color: var(--paper);
+}
+.lost__code span { color: var(--signal-ink); }
+
+/* ===========================================================================
+   RESPONSIVE RECOMPOSITION NOTES
+   ---------------------------------------------------------------------------
+   Small screens keep the command-centre identity but recompose: single column,
+   stack order preserved, touch targets ≥ 44px, no horizontal scrolling except
+   the learning-log table (a genuine data grid).
+   =========================================================================== */
+/* Medium surfaces: the three-up focus grid becomes two-up, then one-up. */
+@media (max-width: 62rem) {
+  .focus-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 46rem) {
+  .focus-grid { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (max-width: 52rem) {
+  .stat-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .routes { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 34rem) {
+  .routes { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Never let a grid or flex child force its parent wider than the screen. */
+.page > *,
+.app-content *,
+.panel,
+.panel__body { min-width: 0; }
+
+/* The status strip sheds secondary readouts before it is allowed to wrap. */
+@media (max-width: 80rem) {
+  .sys-strip { gap: 0.4rem 0.9rem; }
+  .sys-strip__meta { gap: 0.4rem 0.9rem; }
+  .sys-strip .clock { font-size: 0.625rem; }
+}
+@media (max-width: 63.99rem) {
+  .sys-strip { padding: 0.45rem 1rem; }
+  .sys-strip .crumbs { flex-basis: 100%; }
+}
+
+@media (max-width: 46rem) {
+  .hero__main { min-height: auto; }
+  .hero__mark { font-size: clamp(2.25rem, 12vw, 3rem); }
+  .page { padding-bottom: var(--space-xl); }
+  .sysbar { gap: var(--space-s); }
+  .kv { grid-template-columns: minmax(0, 1fr); }
+  .case-head h1 { font-size: var(--step-3); }
+  .filter-row { flex-direction: column; }
+  .filter-group { width: 100%; }
+  .search { width: 100%; }
+  .mission-card__title { font-size: 1.125rem; }
+}
+
+/* Coarse pointers: never rely on hover for meaning. */
+@media (hover: none) {
+  .dest-card:hover,
+  .panel--interactive:hover,
+  .focus-card:hover,
+  .mission-card:hover,
+  .tool-card:hover,
+  .log-entry:hover { transform: none; }
+}
+
+/* Very wide command surfaces: allow the dashboard to breathe. */
+@media (min-width: 105rem) {
+  :root { --rail-w: 19rem; }
+}

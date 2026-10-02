@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Learning Lab — an ongoing log of experiments | Dev Kaushal</title>
+  <meta name="description" content="A dated, filterable record of tests, research and lessons learned while building practical digital marketing, SEO, content and design skills.">
+  <link rel="canonical" href="https://dev.digitalindiahub.com/learning-lab.html">
+  <meta name="theme-color" content="#0b171f">
+  <meta name="color-scheme" content="dark">
+  <meta name="author" content="Dev Kaushal">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dev Kaushal — Command Centre">
+  <meta property="og:title" content="Learning Lab — an ongoing log of experiments | Dev Kaushal">
+  <meta property="og:description" content="A dated, filterable record of tests, research and lessons learned while building practical digital marketing, SEO, content and design skills.">
+  <meta property="og:url" content="https://dev.digitalindiahub.com/learning-lab.html">
+  <meta property="og:image" content="https://dev.digitalindiahub.com/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Dev Kaushal — WORDPRESS &amp; WEB OPERATIONS SPECIALIST. Hands-on WordPress specialist focused on clean site deployments, technical maintenance, and speed optimization. Zero fluff—just reliable web operations.">
+  <meta property="og:locale" content="en_IN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Learning Lab — an ongoing log of experiments | Dev Kaushal">
+  <meta name="twitter:description" content="A dated, filterable record of tests, research and lessons learned while building practical digital marketing, SEO, content and design skills.">
+  <meta name="twitter:image" content="https://dev.digitalindiahub.com/assets/img/og-image.png">
+
+  <!-- Icons & manifest -->
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <!-- Styles: fonts first so the display face is discovered early -->
+  <link rel="preload" href="assets/fonts/sora-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+
+  <!-- Reveal animations are opt-in: without JS everything is visible. -->
+  <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Learning Lab","description":"Ongoing learning and experimentation log.","url":"https://dev.digitalindiahub.com/learning-lab.html","inLanguage":"en","isPartOf":{"@type":"WebSite","@id":"https://dev.digitalindiahub.com/#website"},"about":{"@id":"https://dev.digitalindiahub.com/#person"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Command Center","item":"https://dev.digitalindiahub.com/"},{"@type":"ListItem","position":2,"name":"Learning Lab","item":"https://dev.digitalindiahub.com/learning-lab.html"}]}}</script>
+</head>
+<body data-dest="learning-lab">
+  <div class="app">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="app-rail" id="site-rail">
+    <div class="rail-inner">
+      <div class="rail-brand">
+        <a class="brand" href="index.html" aria-label="Dev Kaushal — home">
+          <span aria-hidden="true">DEV</span><span class="brand__sep" aria-hidden="true">.</span><span class="brand__k" aria-hidden="true">K</span><span class="brand__cursor" aria-hidden="true"></span>
+        </a>
+        <div class="brand-meta">
+          <span class="pip" data-state="open">
+          <span class="pip__dot" aria-hidden="true"></span>
+          <span>AVAILABLE</span>
+        </span>
+          <span class="micro micro--muted">GURUGRAM, HARYANA (DELHI NCR)</span>
+        </div>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav-wrap" data-nav-toggle>
+          <svg aria-hidden="true" focusable="false" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg>
+          <span data-nav-toggle-label>MENU</span>
+          <span class="visually-hidden">— open destination menu</span>
+        </button>
+      </div>
+
+      <div class="rail-nav-wrap" id="primary-nav-wrap" data-nav-wrap>
+        <nav class="rail-nav" aria-label="Primary destinations">
+          <p class="nav-heading micro"><strong>SELECT</strong> DESTINATION</p>
+          <ul class="nav-list" role="list">
+      <li>
+        <a class="nav-item" href="index.html" data-dest="command-center">
+          <span class="nav-item__id" aria-hidden="true">01</span>
+          <span class="nav-item__label">COMMAND CENTER</span>
+          <span class="nav-item__mark" aria-hidden="true"></span>
+        </a>
+      </li>
+      <li>
+        <a class="nav-item" href="story-mode.html" data-dest="story-mode">
+          <span class="nav-item__id" aria-hidden="true">02</span>
+          <span class="nav-item__label">STORY MODE</span>
+          <span class="nav-item__mark" aria-hidden="true"></span>
+        </a>
+      </li>
+      <li>
+        <a class="nav-item" href="missions.html" data-dest="missions">
+          <span class="nav-item__id" aria-hidden="true">03</span>
+          <span class="nav-item__label">MISSIONS</span>
+          <span class="nav-item__mark" aria-hidden="true"></span>
+        </a>
+      </li>
+      <li>
+        <a class="nav-item" href="skill-tree.html" data-dest="skill-tree">
+          <span class="nav-item__id" aria-hidden="true">04</span>
+          <span class="nav-item__label">SKILL TREE</span>
+          <span class="nav-item__mark" aria-hidden="true"></span>
+        </a>
+      </li>
+      <li>
+        <a class="nav-item" href="arsenal.html" data-dest="arsenal">
+          <span class="nav-item__id" aria-hidden="true">05</span>
+          <span class="nav-item__label">ARSENAL</span>
+          <span class="nav-item__mark" aria-hidden="true"></span>
+        </a>
+      </li>
+      <li>
+        <a class="nav-item" href="achievements.html" data-dest="achievements">
+          <span class="nav-item__id" aria-hidden="true">06</span>
+          <span class="nav-item__label">ACHIEVEMENTS</span>
+          <span class="nav-item__mark" aria-hidden="true"></span>
+        </a>
+      </li>
+      <li>
+        <a class="nav-item" href="learning-lab.html" data-dest="learning-lab" aria-current="page">
+          <span class="nav-item__id" aria-hidden="true">07</span>
+          <span class="nav-item__label">LEARNING LAB</span>
+          <span class="nav-item__mark" aria-hidden="true"></span>
+        </a>
+      </li>
+      <li>
+        <a class="nav-item" href="hq.html" data-dest="hq">
+          <span class="nav-item__id" aria-hidden="true">08</span>
+          <span class="nav-item__label">HQ</span>
+          <span class="nav-item__mark" aria-hidden="true"></span>
+        </a>
+      </li>
+</ul>
+        </nav>
+
+        <nav class="nav-sub" aria-label="Connected modules">
+          <p class="nav-heading micro"><strong>CONNECTED</strong> MODULES</p>
+          <div class="nav-sub__grid">
+      <a class="nav-sub__link" href="case-files.html" data-dest="case-files">
+        <span>CASE FILES</span>
+        <svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="nav-sub__link" href="toolkit.html" data-dest="toolkit">
+        <span>TOOLKIT</span>
+        <svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="nav-sub__link" href="learning-log.html" data-dest="learning-log">
+        <span>LEARNING LOG</span>
+        <svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="nav-sub__link" href="certificates.html" data-dest="certificates">
+        <span>CERTIFICATES</span>
+        <svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="nav-sub__link" href="contact.html" data-dest="contact">
+        <span>CONTACT</span>
+        <svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg>
+      </a>
+</div>
+        </nav>
+
+        <div class="rail-status">
+          <dl class="hero__readout">
+            <div class="status-row"><dt>System</dt><dd>ONLINE</dd></div>
+            <div class="status-row"><dt>Mode</dt><dd>DEPLOYING</dd></div>
+            <div class="status-row"><dt>Location</dt><dd>GURUGRAM, HARYANA (DELHI NCR)</dd></div>
+            <div class="status-row"><dt>Version</dt><dd>v1.0.0</dd></div>
+            <div class="status-row"><dt>Local time</dt><dd><time class="clock" data-clock datetime="">--:--:--</time><span class="clock__zone" data-clock-zone>LOCAL</span></dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </header>
+
+    <div class="app-content">
+    <aside class="sys-strip" aria-label="Page context and system status">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="index.html">COMMAND CENTER</a>
+        <span class="crumbs__sep" aria-hidden="true">/</span>
+        <span class="crumbs__here" aria-current="page">07 LEARNING LAB</span>
+      </nav>
+      <div class="sys-strip__spacer"></div>
+      <p class="sys-strip__meta">
+        <span class="pip" data-state="open"><span class="pip__dot" aria-hidden="true"></span> AVAILABLE</span>
+        <span>MODE <b>DEPLOYING</b></span>
+        <span class="sys-strip__meta--secondary">SYSTEM <b>ONLINE</b></span>
+        <span class="sys-strip__meta--secondary">BUILD <b>v1.0.0</b></span>
+        <span><time class="clock util" data-clock datetime="">--:--:--</time><span class="clock__zone" data-clock-zone>LOCAL</span></span>
+      </p>
+    </aside>
+    <main id="main" tabindex="-1">
+      <div class="page">
+        <header class="page-head">
+          <p class="page-head__index micro"><span aria-hidden="true">07</span> R&amp;D</p>
+          <h1 id="page-title">Learning lab</h1>
+          <p class="lede">16 dated entries from an ongoing process: tests, notes, research questions and things that failed informatively. The point is visible progress, not a finished résumé.</p>
+          <div class="page-head__meta">
+            <span class="chip">16 entries</span>
+            <span class="chip">6 categories</span>
+            <span class="chip">Updated continuously</span>
+          </div>
+        </header>
+
+        <section class="section" aria-labelledby="current-title">
+      <div class="section-head">
+        <p class="section-head__label micro">// CURRENTLY LEARNING</p>
+        <h2 id="current-title">Open on the desk right now</h2>
+        <p class="section-head__desc">What is open on the desk right now, with an honest note on how far along each one is. Updated monthly.</p>
+        <div class="section-head__aside"><span class="badge badge--learn">UPDATED OCT 2026</span></div>
+      </div>
+          <div class="currently-learning">
+            <div class="cl-head">
+              <p class="micro micro--signal">ACTIVE STUDY QUEUE</p>
+              <p class="util">Edit in content/learning.js → currentlyLearning</p>
+            </div>
+            <div class="cl-card">
+              <p class="cl-card__label">Technical SEO foundations</p>
+              <p class="cl-card__detail">Indexing, canonicals, sitemaps and page speed — learning what actually changes outcomes.</p>
+              <div class="cl-card__progress"><span>Crawl basics</span><span>Search Console coverage</span><span>Core Web Vitals</span></div>
+              <p><a class="link-more" href="log-004-testing-search-intent.html">Read entry</a></p>
+            </div>
+            <div class="cl-card">
+              <p class="cl-card__label">GA4 without vanity metrics</p>
+              <p class="cl-card__detail">One written question per session, then the single report that answers it.</p>
+              <div class="cl-card__progress"><span>Event model</span><span>Conversions</span><span>Reading reports</span></div>
+              <p><a class="link-more" href="log-008-one-question-per-analytics-session.html">Read entry</a></p>
+            </div>
+            <div class="cl-card">
+              <p class="cl-card__label">Content repurposing systems</p>
+              <p class="cl-card__detail">Making one decent idea produce a week of output without repeating itself.</p>
+              <div class="cl-card__progress"><span>Idea capture</span><span>Format mapping</span><span>Distribution</span></div>
+              <p><a class="link-more" href="log-009-one-idea-four-formats.html">Read entry</a></p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="entries-title">
+      <div class="section-head">
+        <p class="section-head__label micro">// ENTRIES</p>
+        <h2 id="entries-title">Filter the lab</h2>
+        <p class="section-head__desc">Every entry is a real note with a date. Categories describe the discipline; status describes how far the thinking got.</p>
+        
+      </div>
+          <div class="filter-bar" data-filters="lab">
+            <div class="filter-row">
+            <div class="filter-group" data-filter-group="category">
+              <p class="filter-group__label" id="lab-category-label">Category</p>
+              <div class="filter-group__options" role="group" aria-labelledby="lab-category-label">
+                <button class="filter-chip" type="button" data-filter="category" data-value="ALL" aria-pressed="true">All <span class="filter-chip__count">16</span></button>
+                <button class="filter-chip" type="button" data-filter="category" data-value="SEO" aria-pressed="false">SEO <span class="filter-chip__count">02</span></button>
+                <button class="filter-chip" type="button" data-filter="category" data-value="DESIGN" aria-pressed="false">DESIGN <span class="filter-chip__count">04</span></button>
+                <button class="filter-chip" type="button" data-filter="category" data-value="CONTENT" aria-pressed="false">CONTENT <span class="filter-chip__count">03</span></button>
+                <button class="filter-chip" type="button" data-filter="category" data-value="MARKETING" aria-pressed="false">MARKETING <span class="filter-chip__count">03</span></button>
+                <button class="filter-chip" type="button" data-filter="category" data-value="WEB" aria-pressed="false">WEB <span class="filter-chip__count">02</span></button>
+                <button class="filter-chip" type="button" data-filter="category" data-value="EXPERIMENTS" aria-pressed="false">EXPERIMENTS <span class="filter-chip__count">02</span></button>
+              </div>
+            </div>
+            <div class="filter-group" data-filter-group="status">
+              <p class="filter-group__label" id="lab-status-label">Status</p>
+              <div class="filter-group__options" role="group" aria-labelledby="lab-status-label">
+                <button class="filter-chip" type="button" data-filter="status" data-value="ALL" aria-pressed="true">All</button>
+                <button class="filter-chip" type="button" data-filter="status" data-value="ACTIVE" aria-pressed="false">ACTIVE <span class="filter-chip__count">04</span></button>
+                <button class="filter-chip" type="button" data-filter="status" data-value="ONGOING" aria-pressed="false">ONGOING <span class="filter-chip__count">02</span></button>
+                <button class="filter-chip" type="button" data-filter="status" data-value="COMPLETED" aria-pressed="false">COMPLETED <span class="filter-chip__count">10</span></button>
+                <button class="filter-chip" type="button" data-filter="status" data-value="PAUSED" aria-pressed="false">PAUSED <span class="filter-chip__count">00</span></button>
+                <button class="filter-chip" type="button" data-filter="status" data-value="IDEA" aria-pressed="false">IDEA <span class="filter-chip__count">00</span></button>
+              </div>
+            </div>
+              <div class="filter-group">
+                <label class="filter-group__label" for="lab-search">Search</label>
+                <div class="search">
+                  <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>
+                  <input id="lab-search" type="search" data-filter-search placeholder="Search records…" autocomplete="off" spellcheck="false">
+                </div>
+              </div>
+            </div>
+            <div class="filter-status" id="lab-status" role="status" aria-live="polite">
+              <p><span class="results-count" data-results-count>0</span> records shown · <span data-results-total>0</span> total</p>
+              <button class="filter-chip" type="button" data-filter-reset>Reset filters</button>
+            </div>
+          </div>
+
+          <div class="log-grid" data-filter-list>
+            <article class="log-entry reveal" data-category="DESIGN" data-status="COMPLETED" data-search="wrote the empty states first before building any content page for this site, the state for “nothing here yet” was designed and written for each one. design completed systems empty states content model">
+              <div class="log-entry__top">
+                <span class="log-entry__date">SEP 2026</span>
+                <span class="badge badge--done">COMPLETED</span>
+              </div>
+              <h3><a href="log-016-wrote-empty-states-first.html">Wrote the empty states first</a></h3>
+              <p class="log-entry__summary">Before building any content page for this site, the state for “nothing here yet” was designed and written for each one.</p>
+              <div class="log-entry__foot">
+                <span class="cluster">
+                  <span class="badge badge--archived badge--bare">DESIGN</span>
+                  <span class="chip">systems</span><span class="chip">empty states</span>
+                </span>
+                <a class="link-more" href="log-016-wrote-empty-states-first.html">Read entry</a>
+              </div>
+            </article>
+            <article class="log-entry reveal" data-category="WEB" data-status="ONGOING" data-search="a build budget: 200kb of javascript this site was written inside a hard budget: no framework, no animation library and almost no javascript on the critical path. web ongoing performance static site budget">
+              <div class="log-entry__top">
+                <span class="log-entry__date">SEP 2026</span>
+                <span class="badge badge--active">ONGOING</span>
+              </div>
+              <h3><a href="log-014-javascript-build-budget.html">A build budget: 200KB of JavaScript</a></h3>
+              <p class="log-entry__summary">This site was written inside a hard budget: no framework, no animation library and almost no JavaScript on the critical path.</p>
+              <div class="log-entry__foot">
+                <span class="cluster">
+                  <span class="badge badge--archived badge--bare">WEB</span>
+                  <span class="chip">performance</span><span class="chip">static site</span>
+                </span>
+                <a class="link-more" href="log-014-javascript-build-budget.html">Read entry</a>
+              </div>
+            </article>
+            <article class="log-entry reveal" data-category="SEO" data-status="ACTIVE" data-search="crawled my own site and found the boring errors first crawl of a personal site: broken internal links, three duplicate titles and a redirect chain nobody had noticed. seo active technical seo audit maintenance">
+              <div class="log-entry__top">
+                <span class="log-entry__date">SEP 2026</span>
+                <span class="badge badge--active">ACTIVE</span>
+              </div>
+              <h3><a href="log-013-crawled-my-own-site.html">Crawled my own site and found the boring errors</a></h3>
+              <p class="log-entry__summary">First crawl of a personal site: broken internal links, three duplicate titles and a redirect chain nobody had noticed.</p>
+              <div class="log-entry__foot">
+                <span class="cluster">
+                  <span class="badge badge--archived badge--bare">SEO</span>
+                  <span class="chip">technical seo</span><span class="chip">audit</span>
+                </span>
+                <a class="link-more" href="log-013-crawled-my-own-site.html">Read entry</a>
+              </div>
+            </article>
+            <article class="log-entry reveal" data-category="EXPERIMENTS" data-status="COMPLETED" data-search="utm naming that survives a spreadsheet two months of campaign links were unusable because every one had been named a little differently. a lowercase convention fixed it. experiments completed tracking process data hygiene">
+              <div class="log-entry__top">
+                <span class="log-entry__date">SEP 2026</span>
+                <span class="badge badge--done">COMPLETED</span>
+              </div>
+              <h3><a href="log-010-utm-naming-convention.html">UTM naming that survives a spreadsheet</a></h3>
+              <p class="log-entry__summary">Two months of campaign links were unusable because every one had been named a little differently. A lowercase convention fixed it.</p>
+              <div class="log-entry__foot">
+                <span class="cluster">
+                  <span class="badge badge--archived badge--bare">EXPERIMENTS</span>
+                  <span class="chip">tracking</span><span class="chip">process</span>
+                </span>
+                <a class="link-more" href="log-010-utm-naming-convention.html">Read entry</a>
+              </div>
+            </article>
+            <article class="log-entry reveal" data-category="CONTENT" data-status="ACTIVE" data-search="one idea, four formats testing whether a single substantial idea can honestly become a long piece, a carousel, a short note and a video script without padding. content active content system distribution experiment">
+              <div class="log-entry__top">
+                <span class="log-entry__date">SEP 2026</span>
+                <span class="badge badge--active">ACTIVE</span>
+              </div>
+              <h3><a href="log-009-one-idea-four-formats.html">One idea, four formats</a></h3>
+              <p class="log-entry__summary">Testing whether a single substantial idea can honestly become a long piece, a carousel, a short note and a video script without padding.</p>
+              <div class="log-entry__foot">
+                <span class="cluster">
+                  <span class="badge badge--archived badge--bare">CONTENT</span>
+                  <span class="chip">content system</span><span class="chip">distribution</span>
+                </span>
+                <a class="link-more" href="log-009-one-idea-four-formats.html">Read entry</a>
+              </div>
+            </article>
+            <article class="log-entry reveal" data-category="MARKETING" data-status="ONGOING" data-search="one question per analytics session a fixed habit: write the question down before opening ga4, then read only the one report that answers it. marketing ongoing analytics habits reporting">
+              <div class="log-entry__top">
+                <span class="log-entry__date">SEP 2026</span>
+                <span class="badge badge--active">ONGOING</span>
+              </div>
+              <h3><a href="log-008-one-question-per-analytics-session.html">One question per analytics session</a></h3>
+              <p class="log-entry__summary">A fixed habit: write the question down before opening GA4, then read only the one report that answers it.</p>
+              <div class="log-entry__foot">
+                <span class="cluster">
+                  <span class="badge badge--archived badge--bare">MARKETING</span>
+                  <span class="chip">analytics</span><span class="chip">habits</span>
+                </span>
+                <a class="link-more" href="log-008-one-question-per-analytics-session.html">Read entry</a>
+              </div>
+            </article>
+            <article class="log-entry reveal" data-category="SEO" data-status="ACTIVE" data-search="testing search intent, one page at a time a small practice site used to check what actually happens when one page targets one clear intent — and to find out how wrong early guesses are. seo active seo experiment in progress">
+              <div class="log-entry__top">
+                <span class="log-entry__date">SEP 2026</span>
+                <span class="badge badge--active">ACTIVE</span>
+              </div>
+              <h3><a href="log-004-testing-search-intent.html">Testing search intent, one page at a time</a></h3>
+              <p class="log-entry__summary">A small practice site used to check what actually happens when one page targets one clear intent — and to find out how wrong early guesses are.</p>
+              <div class="log-entry__foot">
+                <span class="cluster">
+                  <span class="badge badge--archived badge--bare">SEO</span>
+                  <span class="chip">seo</span><span class="chip">experiment</span>
+                </span>
+                <a class="link-more" href="log-004-testing-search-intent.html">Read entry</a>
+              </div>
+            </article>
+            <article class="log-entry reveal" data-category="EXPERIMENTS" data-status="COMPLETED" data-search="tested a page builder against the block editor same page, same content, two build paths — timed for assembly and then timed again for a realistic edit three months later. experiments completed wordpress comparison maintenance">
+              <div class="log-entry__top">
+                <span class="log-entry__date">AUG 2026</span>
+                <span class="badge badge--done">COMPLETED</span>
+              </div>
+              <h3><a href="log-015-page-builder-vs-block-editor.html">Tested a page builder against the block editor</a></h3>
+              <p class="log-entry__summary">Same page, same content, two build paths — timed for assembly and then timed again for a realistic edit three months later.</p>
+              <div class="log-entry__foot">
+                <span class="cluster">
+                  <span class="badge badge--archived badge--bare">EXPERIMENTS</span>
+                  <span class="chip">wordpress</span><span class="chip">comparison</span>
+                </span>
+                <a class="link-more" href="log-015-page-builder-vs-block-editor.html">Read entry</a>
+              </div>
+            </article>
+            <article class="log-entry reveal" data-category="WEB" data-status="ACTIVE" data-search="who actually maintains this page? rebuilding one page four ways to compare not how fast it can be built, but how painful it is to edit six months later. web active wordpress handover maintenance">
+              <div class="log-entry__top">
+                <span class="log-entry__date">AUG 2026</span>
+                <span class="badge badge--active">ACTIVE</span>
+              </div>
+              <h3><a href="log-007-who-maintains-this-page.html">Who actually maintains this page?</a></h3>
+              <p class="log-entry__summary">Rebuilding one page four ways to compare not how fast it can be built, but how painful it is to edit six months later.</p>
+              <div class="log-entry__foot">
+                <span class="cluster">
+                  <span class="badge badge--archived badge--bare">WEB</span>
+                  <span class="chip">wordpress</span><span class="chip">handover</span>
+                </span>
+                <a class="link-more" href="log-007-who-maintains-this-page.html">Read entry</a>
+              </div>
+            </article>
+            <article class="log-entry reveal" data-category="MARKETING" data-status="COMPLETED" data-search="reading the comments as research collected customer language from public review sections and comment threads for a week, without deviating from the actual words used. marketing completed research language copy">
+              <div class="log-entry__top">
+                <span class="log-entry__date">JUL 2026</span>
+                <span class="badge badge--done">COMPLETED</span>
+              </div>
+              <h3><a href="log-011-comments-as-research.html">Reading the comments as research</a></h3>
+              <p class="log-entry__summary">Collected customer language from public review sections and comment threads for a week, without deviating from the actual words used.</p>
+              <div class="log-entry__foot">
+                <span class="cluster">
+                  <span class="badge badge--archived badge--bare">MARKETING</span>
+                  <span class="chip">research</span><span class="chip">language</span>
+                </span>
+                <a class="link-more" href="log-011-comments-as-research.html">Read entry</a>
+              </div>
+            </article>
+            <article class="log-entry reveal" data-category="CONTENT" data-status="COMPLETED" data-search="six templates, thirty days a constraint test on a fictional café: can a small business run a month of content from six reusable layouts without looking lazy? content completed social templates constraints">
+              <div class="log-entry__top">
+                <span class="log-entry__date">JUL 2026</span>
+                <span class="badge badge--done">COMPLETED</span>
+              </div>
+              <h3><a href="log-005-six-templates-thirty-days.html">Six templates, thirty days</a></h3>
+              <p class="log-entry__summary">A constraint test on a fictional café: can a small business run a month of content from six reusable layouts without looking lazy?</p>
+              <div class="log-entry__foot">
+                <span class="cluster">
+                  <span class="badge badge--archived badge--bare">CONTENT</span>
+                  <span class="chip">social</span><span class="chip">templates</span>
+                </span>
+                <a class="link-more" href="log-005-six-templates-thirty-days.html">Read entry</a>
+              </div>
+            </article>
+            <article class="log-entry reveal" data-category="MARKETING" data-status="COMPLETED" data-search="one sentence before any design on the property brief, the first screen was written as a plain sentence before a single layout decision was made. it changed the whole page order. marketing completed messaging structure client work">
+              <div class="log-entry__top">
+                <span class="log-entry__date">JUN 2026</span>
+                <span class="badge badge--done">COMPLETED</span>
+              </div>
+              <h3><a href="log-003-one-sentence-before-any-design.html">One sentence before any design</a></h3>
+              <p class="log-entry__summary">On the property brief, the first screen was written as a plain sentence before a single layout decision was made. It changed the whole page order.</p>
+              <div class="log-entry__foot">
+                <span class="cluster">
+                  <span class="badge badge--archived badge--bare">MARKETING</span>
+                  <span class="chip">messaging</span><span class="chip">structure</span>
+                </span>
+                <a class="link-more" href="log-003-one-sentence-before-any-design.html">Read entry</a>
+              </div>
+            </article>
+            <article class="log-entry reveal" data-category="DESIGN" data-status="COMPLETED" data-search="rebuilt the palette around contrast checks a dark palette that looked excellent on a laptop was nearly unreadable outdoors. every pair is now measured, not judged by eye. design completed accessibility colour contrast">
+              <div class="log-entry__top">
+                <span class="log-entry__date">MAY 2026</span>
+                <span class="badge badge--done">COMPLETED</span>
+              </div>
+              <h3><a href="log-012-palette-contrast-checks.html">Rebuilt the palette around contrast checks</a></h3>
+              <p class="log-entry__summary">A dark palette that looked excellent on a laptop was nearly unreadable outdoors. Every pair is now measured, not judged by eye.</p>
+              <div class="log-entry__foot">
+                <span class="cluster">
+                  <span class="badge badge--archived badge--bare">DESIGN</span>
+                  <span class="chip">accessibility</span><span class="chip">colour</span>
+                </span>
+                <a class="link-more" href="log-012-palette-contrast-checks.html">Read entry</a>
+              </div>
+            </article>
+            <article class="log-entry reveal" data-category="DESIGN" data-status="COMPLETED" data-search="the same poster, twenty times one message, one grid, twenty typographic variations. no images and no colour trickery, to see what hierarchy alone can carry. design completed typography practice restraint">
+              <div class="log-entry__top">
+                <span class="log-entry__date">MAY 2026</span>
+                <span class="badge badge--done">COMPLETED</span>
+              </div>
+              <h3><a href="log-006-same-poster-twenty-times.html">The same poster, twenty times</a></h3>
+              <p class="log-entry__summary">One message, one grid, twenty typographic variations. No images and no colour trickery, to see what hierarchy alone can carry.</p>
+              <div class="log-entry__foot">
+                <span class="cluster">
+                  <span class="badge badge--archived badge--bare">DESIGN</span>
+                  <span class="chip">typography</span><span class="chip">practice</span>
+                </span>
+                <a class="link-more" href="log-006-same-poster-twenty-times.html">Read entry</a>
+              </div>
+            </article>
+            <article class="log-entry reveal" data-category="CONTENT" data-status="COMPLETED" data-search="thirty ideas in one sitting a timed capture exercise: thirty raw ideas in ninety minutes, then a brutal cull to find out which ones survived a night’s sleep. content completed ideation writing process">
+              <div class="log-entry__top">
+                <span class="log-entry__date">MAY 2026</span>
+                <span class="badge badge--done">COMPLETED</span>
+              </div>
+              <h3><a href="log-002-thirty-ideas-one-sitting.html">Thirty ideas in one sitting</a></h3>
+              <p class="log-entry__summary">A timed capture exercise: thirty raw ideas in ninety minutes, then a brutal cull to find out which ones survived a night’s sleep.</p>
+              <div class="log-entry__foot">
+                <span class="cluster">
+                  <span class="badge badge--archived badge--bare">CONTENT</span>
+                  <span class="chip">ideation</span><span class="chip">writing</span>
+                </span>
+                <a class="link-more" href="log-002-thirty-ideas-one-sitting.html">Read entry</a>
+              </div>
+            </article>
+            <article class="log-entry reveal" data-category="DESIGN" data-status="COMPLETED" data-search="retired the skill percentage bars the first portfolio listed skills as confident percentages. nothing behind them could be defended, so the whole scale was replaced. design completed honesty design system skills">
+              <div class="log-entry__top">
+                <span class="log-entry__date">APR 2026</span>
+                <span class="badge badge--done">COMPLETED</span>
+              </div>
+              <h3><a href="log-001-retired-skill-percentage-bars.html">Retired the skill percentage bars</a></h3>
+              <p class="log-entry__summary">The first portfolio listed skills as confident percentages. Nothing behind them could be defended, so the whole scale was replaced.</p>
+              <div class="log-entry__foot">
+                <span class="cluster">
+                  <span class="badge badge--archived badge--bare">DESIGN</span>
+                  <span class="chip">honesty</span><span class="chip">design system</span>
+                </span>
+                <a class="link-more" href="log-001-retired-skill-percentage-bars.html">Read entry</a>
+              </div>
+            </article>
+          </div>
+
+          <div data-filter-empty hidden>
+      <div class="empty">
+        <p class="empty__type micro micro--signal">NO MATCHING ENTRIES</p>
+        <h3>No entries match those filters</h3>
+        <p>Try another category, clear the search box or reset the filters.</p>
+        
+        <p><a class="link-more" href="learning-log.html">Open the learning log table</a></p>
+      </div>
+          </div>
+        </section>
+
+        <section class="section" aria-labelledby="method-title">
+      <div class="section-head">
+        <p class="section-head__label micro">// METHOD</p>
+        <h2 id="method-title">How entries are written</h2>
+        
+        
+      </div>
+          <div class="grid grid--auto">
+            <div class="callout callout--info">
+              <h3><svg aria-hidden="true" focusable="false" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4.5h14v15H5z"/><path d="M8.5 9h7"/><path d="M8.5 12.5h7"/><path d="M8.5 16h4"/></svg> Each entry records</h3>
+              <ul>
+                <li>What was actually tried, with a date</li>
+                <li>What was found — including what did not work</li>
+                <li>What it changed in the next attempt</li>
+              </ul>
+            </div>
+            <div class="callout callout--caution">
+              <h3><svg aria-hidden="true" focusable="false" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4l8.5 15h-17z"/><path d="M12 10v4.5"/><path d="M12 17h.01"/></svg> What entries avoid</h3>
+              <ul>
+                <li>Rewriting history after a better result appeared</li>
+                <li>Turning a small test into a case study</li>
+                <li>Presenting reading as experience</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="sysbar" id="site-footer">
+      <div class="sysbar__grid">
+        <div class="sysbar__block">
+          <p class="micro micro--signal">DEV.K</p>
+          <p class="util">WORDPRESS &amp; WEB OPERATIONS SPECIALIST</p>
+          <p class="util">GURUGRAM, HARYANA (DELHI NCR)</p>
+          <p class="util">Open for Full-Time Roles &amp; WordPress Web Support Deployments.</p>
+        </div>
+        <div class="sysbar__block">
+          <p class="micro">DESTINATIONS</p>
+          <ul>
+            <li><a href="index.html">COMMAND CENTER</a></li>
+            <li><a href="story-mode.html">STORY MODE</a></li>
+            <li><a href="missions.html">MISSIONS</a></li>
+            <li><a href="skill-tree.html">SKILL TREE</a></li>
+            <li><a href="arsenal.html">ARSENAL</a></li>
+            <li><a href="achievements.html">ACHIEVEMENTS</a></li>
+            <li><a href="learning-lab.html" aria-current="page">LEARNING LAB</a></li>
+            <li><a href="hq.html">HQ</a></li>
+          </ul>
+        </div>
+        <div class="sysbar__block">
+          <p class="micro">CONNECTED MODULES</p>
+          <ul>
+            <li><a href="case-files.html">CASE FILES</a></li>
+            <li><a href="toolkit.html">TOOLKIT</a></li>
+            <li><a href="learning-log.html">LEARNING LOG</a></li>
+            <li><a href="certificates.html">CERTIFICATES</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+        <div class="sysbar__block">
+          <p class="micro">SYSTEM</p>
+          <ul>
+            <li><a href="hq.html">Profile &amp; contact</a></li>
+            <li><a href="hq.html#cv">CV / résumé</a></li>
+            <li><a href="hq.html#colophon">Colophon &amp; accessibility</a></li>
+            <li><a href="index.html#explore">Explore the system</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="sysbar__note">
+        <p>© <span data-current-year>2026</span> Dev Kaushal — built and maintained in the open. Content reflects self-reported, early-career work; nothing here is presented as verified client results.</p>
+        <a class="to-top" href="#main"><svg class="to-top__icon" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg> BACK TO TOP</a>
+      </div>
+    </footer>
+    </div>
+  </div>
+
+  <nav class="app-dock" aria-label="Quick destinations (compact)">
+    <a class="dock-item" href="index.html" data-dest="command-center">
+      <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7.5" height="7.5"/><rect x="13.5" y="3" width="7.5" height="4.5"/><rect x="13.5" y="11" width="7.5" height="10"/><rect x="3" y="14" width="7.5" height="7"/></svg>
+      <span>HOME</span>
+    </a>
+    <a class="dock-item" href="story-mode.html" data-dest="story-mode">
+      <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4.5h6a3 3 0 0 1 3 3v12a2.5 2.5 0 0 0-2.5-2.5H4z"/><path d="M20 4.5h-6a3 3 0 0 0-3 3v12a2.5 2.5 0 0 1 2.5-2.5H20z"/></svg>
+      <span>STORY</span>
+    </a>
+    <a class="dock-item" href="missions.html" data-dest="missions">
+      <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg>
+      <span>MISSIONS</span>
+    </a>
+    <a class="dock-item" href="learning-lab.html" data-dest="learning-lab" aria-current="page">
+      <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6"/><path d="M10 3v6.2L5.5 17A2.5 2.5 0 0 0 7.7 21h8.6a2.5 2.5 0 0 0 2.2-4L14 9.2V3"/><path d="M7.5 14h9"/></svg>
+      <span>LAB</span>
+    </a>
+    <a class="dock-item" href="hq.html" data-dest="hq">
+      <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V9.5L12 4l8 5.5V21"/><path d="M9.5 21v-6h5v6"/></svg>
+      <span>HQ</span>
+    </a>
+  </nav>
+  <script src="assets/js/site.js" type="module"></script>
+</body>
+</html>

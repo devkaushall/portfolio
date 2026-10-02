@@ -1,0 +1,12 @@
+/* TEAM */
+  Owner, design, content: Dev Kaushal
+  Role: WORDPRESS & WEB OPERATIONS SPECIALIST
+  Location: GURUGRAM, HARYANA (DELHI NCR)
+  Contact: devkaushal8923@gmail.com
+
+/* SITE */
+  Built: 2026-10-02
+  Version: v1.0.0
+  Stack: static HTML generated from structured content modules (Node build script)
+  Type: Sora, Manrope, JetBrains Mono — self-hosted
+  Fonts, scripts and images: all first-party; no third-party requests on the critical path

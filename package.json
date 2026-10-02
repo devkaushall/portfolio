@@ -1,0 +1,24 @@
+{
+  "name": "dev-kaushal-command-centre",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Personal command centre for Dev Kaushal — digital marketer and designer. A content-driven static site: structured data in /content, generated HTML in /public.",
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "serve": "node tools/serve.mjs",
+    "dev": "node tools/build.mjs && node tools/serve.mjs",
+    "test": "node tools/test.mjs",
+    "qa": "node tools/qa.mjs",
+    "fonts": "node tools/fetch-fonts.mjs",
+    "assets": "python3 tools/make-assets.py"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "playwright": "1.63.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

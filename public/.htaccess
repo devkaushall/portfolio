@@ -1,0 +1,90 @@
+# =============================================================================
+#  DEV.K — COMMAND CENTRE · Apache / cPanel configuration
+# -----------------------------------------------------------------------------
+#  Included in the build output (public/.htaccess). If your host is Apache-based
+#  — which includes most WordPress/cPanel hosting — upload the contents of
+#  public/ into the document root and this file takes care of the rest.
+#
+#  On Netlify, Vercel, Cloudflare Pages or GitHub Pages this file is ignored;
+#  use the equivalent rules in those platforms' dashboards (noted in README.md).
+# =============================================================================
+
+# ── Custom error document ────────────────────────────────────────────────────
+ErrorDocument 404 /404.html
+
+# ── Default document ─────────────────────────────────────────────────────────
+DirectoryIndex index.html
+
+# ── Correct MIME types for modern assets ─────────────────────────────────────
+<IfModule mod_mime.c>
+  AddType font/woff2          .woff2
+  AddType image/webp          .webp
+  AddType image/svg+xml       .svg
+  AddType application/manifest+json .webmanifest
+  AddType application/xml     .xml
+  AddType text/plain          .txt
+</IfModule>
+
+# ── Compression ──────────────────────────────────────────────────────────────
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/plain text/xml
+  AddOutputFilterByType DEFLATE application/javascript text/javascript
+  AddOutputFilterByType DEFLATE application/json application/xml
+  AddOutputFilterByType DEFLATE image/svg+xml application/manifest+json
+</IfModule>
+
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/css text/javascript
+  AddOutputFilterByType BROTLI_COMPRESS application/javascript application/json
+  AddOutputFilterByType BROTLI_COMPRESS image/svg+xml
+</IfModule>
+
+# ── Caching ──────────────────────────────────────────────────────────────────
+#  Fingerprinted-by-release assets (CSS, JS, fonts) can be cached hard; HTML is
+#  revalidated so content edits appear immediately.
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html                 "access plus 0 seconds"
+  ExpiresByType text/css                  "access plus 1 year"
+  ExpiresByType text/javascript           "access plus 1 year"
+  ExpiresByType application/javascript    "access plus 1 year"
+  ExpiresByType font/woff2               "access plus 1 year"
+  ExpiresByType image/webp               "access plus 6 months"
+  ExpiresByType image/png                "access plus 6 months"
+  ExpiresByType image/svg+xml            "access plus 6 months"
+  ExpiresByType application/xml          "access plus 1 day"
+</IfModule>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(css|js|woff2|webp|png|svg)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=0, must-revalidate"
+  </FilesMatch>
+
+  # Baseline security headers (safe for a static site).
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set X-Frame-Options "SAMEORIGIN"
+  Header always set Permissions-Policy "geolocation=(), camera=(), microphone=()"
+</IfModule>
+
+# ── Pretty URLs ──────────────────────────────────────────────────────────────
+#  Optional. Uncomment to serve /missions instead of /missions.html.
+#  Every internal link uses the .html form, so this is purely cosmetic.
+#
+# <IfModule mod_rewrite.c>
+#   RewriteEngine On
+#   RewriteCond %{REQUEST_FILENAME} !-d
+#   RewriteCond %{REQUEST_FILENAME}\.html -f
+#   RewriteRule ^(.+)$ $1.html [L]
+# </IfModule>
+
+# ── Keep working files out of the document root, just in case ────────────────
+<FilesMatch "(^\.|\.(mjs|json|md|py)$)">
+  Require all denied
+</FilesMatch>
+<FilesMatch "^(package|package-lock)\.json$">
+  Require all denied
+</FilesMatch>

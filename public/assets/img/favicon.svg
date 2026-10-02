@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Dev Kaushal">
+  <rect width="64" height="64" fill="#0b171f"/>
+  <rect x="0.5" y="0.5" width="63" height="63" fill="none" stroke="#e8dbc7" stroke-opacity="0.22"/>
+  <g stroke="#f6f2ec" stroke-width="6.5" stroke-linecap="square" fill="none">
+    <path d="M19 13v38"/>
+    <path d="M41 13L23 32l18 19"/>
+  </g>
+  <rect x="45" y="43" width="9" height="9" fill="#c86a38"/>
+</svg>

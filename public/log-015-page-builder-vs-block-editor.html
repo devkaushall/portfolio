@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Tested a page builder against the block editor — learning log | Dev Kaushal</title>
+  <meta name="description" content="Same page, same content, two build paths — timed for assembly and then timed again for a realistic edit three months later.">
+  <link rel="canonical" href="https://dev.digitalindiahub.com/log-015-page-builder-vs-block-editor.html">
+  <meta name="theme-color" content="#0b171f">
+  <meta name="color-scheme" content="dark">
+  <meta name="author" content="Dev Kaushal">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Dev Kaushal — Command Centre">
+  <meta property="og:title" content="Tested a page builder against the block editor — learning log | Dev Kaushal">
+  <meta property="og:description" content="Same page, same content, two build paths — timed for assembly and then timed again for a realistic edit three months later.">
+  <meta property="og:url" content="https://dev.digitalindiahub.com/log-015-page-builder-vs-block-editor.html">
+  <meta property="og:image" content="https://dev.digitalindiahub.com/assets/img/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Dev Kaushal — WORDPRESS &amp; WEB OPERATIONS SPECIALIST. Hands-on WordPress specialist focused on clean site deployments, technical maintenance, and speed optimization. Zero fluff—just reliable web operations.">
+  <meta property="og:locale" content="en_IN">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tested a page builder against the block editor — learning log | Dev Kaushal">
+  <meta name="twitter:description" content="Same page, same content, two build paths — timed for assembly and then timed again for a realistic edit three months later.">
+  <meta name="twitter:image" content="https://dev.digitalindiahub.com/assets/img/og-image.png">
+
+  <!-- Icons & manifest -->
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/img/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+
+  <!-- Styles: fonts first so the display face is discovered early -->
+  <link rel="preload" href="assets/fonts/sora-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="assets/css/app.css">
+
+  <!-- Reveal animations are opt-in: without JS everything is visible. -->
+  <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","name":"Tested a page builder against the block editor","description":"Same page, same content, two build paths — timed for assembly and then timed again for a realistic edit three months later.","url":"https://dev.digitalindiahub.com/log-015-page-builder-vs-block-editor.html","inLanguage":"en","isPartOf":{"@type":"WebSite","@id":"https://dev.digitalindiahub.com/#website"},"about":{"@id":"https://dev.digitalindiahub.com/#person"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Command Center","item":"https://dev.digitalindiahub.com/"},{"@type":"ListItem","position":2,"name":"Tested a page builder against the block editor","item":"https://dev.digitalindiahub.com/log-015-page-builder-vs-block-editor.html"}]}}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Tested a page builder against the block editor","datePublished":"2026-08","articleSection":"EXPERIMENTS","author":{"@id":"https://dev.digitalindiahub.com/#person"},"keywords":"wordpress, comparison, maintenance"}</script>
+</head>
+<body data-dest="learning-log">
+  <div class="app">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="app-rail" id="site-rail">
+    <div class="rail-inner">
+      <div class="rail-brand">
+        <a class="brand" href="index.html" aria-label="Dev Kaushal — home">
+          <span aria-hidden="true">DEV</span><span class="brand__sep" aria-hidden="true">.</span><span class="brand__k" aria-hidden="true">K</span><span class="brand__cursor" aria-hidden="true"></span>
+        </a>
+        <div class="brand-meta">
+          <span class="pip" data-state="open">
+          <span class="pip__dot" aria-hidden="true"></span>
+          <span>AVAILABLE</span>
+        </span>
+          <span class="micro micro--muted">GURUGRAM, HARYANA (DELHI NCR)</span>
+        </div>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav-wrap" data-nav-toggle>
+          <svg aria-hidden="true" focusable="false" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg>
+          <span data-nav-toggle-label>MENU</span>
+          <span class="visually-hidden">— open destination menu</span>
+        </button>
+      </div>
+
+      <div class="rail-nav-wrap" id="primary-nav-wrap" data-nav-wrap>
+        <nav class="rail-nav" aria-label="Primary destinations">
+          <p class="nav-heading micro"><strong>SELECT</strong> DESTINATION</p>
+          <ul class="nav-list" role="list">
+      <li>
+        <a class="nav-item" href="index.html" data-dest="command-center">
+          <span class="nav-item__id" aria-hidden="true">01</span>
+          <span class="nav-item__label">COMMAND CENTER</span>
+          <span class="nav-item__mark" aria-hidden="true"></span>
+        </a>
+      </li>
+      <li>
+        <a class="nav-item" href="story-mode.html" data-dest="story-mode">
+          <span class="nav-item__id" aria-hidden="true">02</span>
+          <span class="nav-item__label">STORY MODE</span>
+          <span class="nav-item__mark" aria-hidden="true"></span>
+        </a>
+      </li>
+      <li>
+        <a class="nav-item" href="missions.html" data-dest="missions">
+          <span class="nav-item__id" aria-hidden="true">03</span>
+          <span class="nav-item__label">MISSIONS</span>
+          <span class="nav-item__mark" aria-hidden="true"></span>
+        </a>
+      </li>
+      <li>
+        <a class="nav-item" href="skill-tree.html" data-dest="skill-tree">
+          <span class="nav-item__id" aria-hidden="true">04</span>
+          <span class="nav-item__label">SKILL TREE</span>
+          <span class="nav-item__mark" aria-hidden="true"></span>
+        </a>
+      </li>
+      <li>
+        <a class="nav-item" href="arsenal.html" data-dest="arsenal">
+          <span class="nav-item__id" aria-hidden="true">05</span>
+          <span class="nav-item__label">ARSENAL</span>
+          <span class="nav-item__mark" aria-hidden="true"></span>
+        </a>
+      </li>
+      <li>
+        <a class="nav-item" href="achievements.html" data-dest="achievements">
+          <span class="nav-item__id" aria-hidden="true">06</span>
+          <span class="nav-item__label">ACHIEVEMENTS</span>
+          <span class="nav-item__mark" aria-hidden="true"></span>
+        </a>
+      </li>
+      <li>
+        <a class="nav-item" href="learning-lab.html" data-dest="learning-lab">
+          <span class="nav-item__id" aria-hidden="true">07</span>
+          <span class="nav-item__label">LEARNING LAB</span>
+          <span class="nav-item__mark" aria-hidden="true"></span>
+        </a>
+      </li>
+      <li>
+        <a class="nav-item" href="hq.html" data-dest="hq">
+          <span class="nav-item__id" aria-hidden="true">08</span>
+          <span class="nav-item__label">HQ</span>
+          <span class="nav-item__mark" aria-hidden="true"></span>
+        </a>
+      </li>
+</ul>
+        </nav>
+
+        <nav class="nav-sub" aria-label="Connected modules">
+          <p class="nav-heading micro"><strong>CONNECTED</strong> MODULES</p>
+          <div class="nav-sub__grid">
+      <a class="nav-sub__link" href="case-files.html" data-dest="case-files">
+        <span>CASE FILES</span>
+        <svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="nav-sub__link" href="toolkit.html" data-dest="toolkit">
+        <span>TOOLKIT</span>
+        <svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="nav-sub__link" href="learning-log.html" data-dest="learning-log" aria-current="page">
+        <span>LEARNING LOG</span>
+        <svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="nav-sub__link" href="certificates.html" data-dest="certificates">
+        <span>CERTIFICATES</span>
+        <svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg>
+      </a>
+      <a class="nav-sub__link" href="contact.html" data-dest="contact">
+        <span>CONTACT</span>
+        <svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg>
+      </a>
+</div>
+        </nav>
+
+        <div class="rail-status">
+          <dl class="hero__readout">
+            <div class="status-row"><dt>System</dt><dd>ONLINE</dd></div>
+            <div class="status-row"><dt>Mode</dt><dd>DEPLOYING</dd></div>
+            <div class="status-row"><dt>Location</dt><dd>GURUGRAM, HARYANA (DELHI NCR)</dd></div>
+            <div class="status-row"><dt>Version</dt><dd>v1.0.0</dd></div>
+            <div class="status-row"><dt>Local time</dt><dd><time class="clock" data-clock datetime="">--:--:--</time><span class="clock__zone" data-clock-zone>LOCAL</span></dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </header>
+
+    <div class="app-content">
+    <aside class="sys-strip" aria-label="Page context and system status">
+      <nav class="crumbs" aria-label="Breadcrumb">
+        <a href="index.html">COMMAND CENTER</a>
+        <span class="crumbs__sep" aria-hidden="true">/</span>
+        <span class="crumbs__here" aria-current="page">— LEARNING LOG</span>
+      </nav>
+      <div class="sys-strip__spacer"></div>
+      <p class="sys-strip__meta">
+        <span class="pip" data-state="open"><span class="pip__dot" aria-hidden="true"></span> AVAILABLE</span>
+        <span>MODE <b>DEPLOYING</b></span>
+        <span class="sys-strip__meta--secondary">SYSTEM <b>ONLINE</b></span>
+        <span class="sys-strip__meta--secondary">BUILD <b>v1.0.0</b></span>
+        <span><time class="clock util" data-clock datetime="">--:--:--</time><span class="clock__zone" data-clock-zone>LOCAL</span></span>
+      </p>
+    </aside>
+    <main id="main" tabindex="-1">
+      <div class="page">
+        <p><a class="back-link" href="learning-log.html"><svg aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg> Back to the learning log</a></p>
+
+        <header class="case-head">
+          <div class="case-head__row">
+            <span class="mission-card__id">LAB-015</span>
+            <span class="badge badge--done">COMPLETED</span>
+            <span class="badge badge--archived badge--bare">EXPERIMENTS</span>
+            <span class="micro">AUG 2026</span>
+          </div>
+          <h1 id="page-title">Tested a page builder against the block editor</h1>
+          <p class="lede">Same page, same content, two build paths — timed for assembly and then timed again for a realistic edit three months later.</p>
+        </header>
+
+        <div class="split split--aside">
+          <div class="stack stack--m">
+            <section class="section" aria-labelledby="entry-title">
+      <div class="section-head">
+        <p class="section-head__label micro">// ENTRY</p>
+        <h2 id="entry-title">What happened</h2>
+        
+        
+      </div>
+              <div class="prose prose--wide">
+                <p>The builder won the first measurement comfortably: roughly half the assembly time. It lost the second measurement, which is the one that matters over a project’s life.</p>
+                <p>Simple edits took longer, markup was harder to inspect, and a plugin update had visibly shifted a spacing rule. Nothing broke, but the page had changed without anyone deciding to change it.</p>
+                <p>The conclusion is not that page builders are wrong — they are a reasonable choice when the client will edit the site themselves and the design is simple. It is that the choice should be made on maintenance, not on build speed.</p>
+              </div>
+            </section>
+
+            <section class="section" aria-labelledby="findings-title">
+      <div class="section-head">
+        <p class="section-head__label micro">// FINDINGS</p>
+        <h2 id="findings-title">What was learned</h2>
+        
+        
+      </div>
+              <ul class="bullets bullets--check">
+                <li>Optimise for the edit six months later, not the build this afternoon.</li>
+                <li>Unexpected visual drift is a maintenance cost, not a bug.</li>
+                <li>Write the trade-off down, or the argument restarts next project.</li>
+              </ul>
+            </section>
+
+            <section class="section" aria-labelledby="next-title">
+      <div class="section-head">
+        <p class="section-head__label micro">// NEXT</p>
+        <h2 id="next-title">What happens next</h2>
+        
+        
+      </div>
+              <div class="callout callout--info">
+                <h3><svg aria-hidden="true" focusable="false" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg> Follow-up</h3>
+                <p>Document a short decision tree for choosing a build approach.</p>
+              </div>
+            </section>
+          </div>
+
+          <aside class="stack stack--m" aria-label="Entry metadata">
+            <div class="panel">
+              <div class="panel__head"><span class="panel__index">ENTRY</span><span class="panel__title">RECORD</span></div>
+              <div class="panel__body">
+      <dl class="kv">
+          <dt>Entry ID</dt>
+          <dd>LAB-015</dd>
+          <dt>Date</dt>
+          <dd>AUG 2026</dd>
+          <dt>Category</dt>
+          <dd>EXPERIMENTS</dd>
+          <dt>Status</dt>
+          <dd><span class="badge badge--done">COMPLETED</span></dd>
+          <dt>Tags</dt>
+          <dd>wordpress, comparison, maintenance</dd>
+      </dl>
+              </div>
+            </div>
+
+            <div class="panel">
+              <div class="panel__head"><span class="panel__index">LINKS</span><span class="panel__title">CONNECTED</span></div>
+              <div class="panel__body stack stack--s">
+                <p class="micro">SKILLS</p>
+                <div class="cluster"><a class="chip chip--skill" href="skill-tree.html#node-wordpress">WordPress builds</a><a class="chip chip--skill" href="skill-tree.html#node-page-structure">Page &amp; IA structure</a><a class="chip chip--skill" href="skill-tree.html#node-hosting-domains">Hosting, domains &amp; handover</a></div>
+                <p class="micro" style="margin-top:0.6rem">TOOLS</p>
+                <div class="cluster"><a class="chip chip--tool" href="toolkit.html#tool-wordpress">WordPress</a><a class="chip chip--tool" href="toolkit.html#tool-elementor">Elementor</a><a class="chip chip--tool" href="toolkit.html#tool-vscode">VS Code</a></div>
+                <p class="micro" style="margin-top:0.6rem">MISSIONS</p><div class="cluster"><a class="chip" href="case-007-wordpress-theme-notes.html">M-007 WordPress Build Notes</a></div>
+              </div>
+            </div>
+
+            <div class="panel panel--pad stack stack--s">
+              <p class="micro micro--signal">NAVIGATE</p>
+              <div class="pager" style="border:0;padding:0">
+                <a class="link-more" href="log-014-javascript-build-budget.html">Newer entry</a>
+                <a class="link-more" href="log-016-wrote-empty-states-first.html">Older entry</a>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+    <footer class="sysbar" id="site-footer">
+      <div class="sysbar__grid">
+        <div class="sysbar__block">
+          <p class="micro micro--signal">DEV.K</p>
+          <p class="util">WORDPRESS &amp; WEB OPERATIONS SPECIALIST</p>
+          <p class="util">GURUGRAM, HARYANA (DELHI NCR)</p>
+          <p class="util">Open for Full-Time Roles &amp; WordPress Web Support Deployments.</p>
+        </div>
+        <div class="sysbar__block">
+          <p class="micro">DESTINATIONS</p>
+          <ul>
+            <li><a href="index.html">COMMAND CENTER</a></li>
+            <li><a href="story-mode.html">STORY MODE</a></li>
+            <li><a href="missions.html">MISSIONS</a></li>
+            <li><a href="skill-tree.html">SKILL TREE</a></li>
+            <li><a href="arsenal.html">ARSENAL</a></li>
+            <li><a href="achievements.html">ACHIEVEMENTS</a></li>
+            <li><a href="learning-lab.html">LEARNING LAB</a></li>
+            <li><a href="hq.html">HQ</a></li>
+          </ul>
+        </div>
+        <div class="sysbar__block">
+          <p class="micro">CONNECTED MODULES</p>
+          <ul>
+            <li><a href="case-files.html">CASE FILES</a></li>
+            <li><a href="toolkit.html">TOOLKIT</a></li>
+            <li><a href="learning-log.html" aria-current="page">LEARNING LOG</a></li>
+            <li><a href="certificates.html">CERTIFICATES</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+          </ul>
+        </div>
+        <div class="sysbar__block">
+          <p class="micro">SYSTEM</p>
+          <ul>
+            <li><a href="hq.html">Profile &amp; contact</a></li>
+            <li><a href="hq.html#cv">CV / résumé</a></li>
+            <li><a href="hq.html#colophon">Colophon &amp; accessibility</a></li>
+            <li><a href="index.html#explore">Explore the system</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="sysbar__note">
+        <p>© <span data-current-year>2026</span> Dev Kaushal — built and maintained in the open. Content reflects self-reported, early-career work; nothing here is presented as verified client results.</p>
+        <a class="to-top" href="#main"><svg class="to-top__icon" aria-hidden="true" focusable="false" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h15"/><path d="M13 6l6 6-6 6"/></svg> BACK TO TOP</a>
+      </div>
+    </footer>
+    </div>
+  </div>
+
+  <nav class="app-dock" aria-label="Quick destinations (compact)">
+    <a class="dock-item" href="index.html" data-dest="command-center">
+      <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7.5" height="7.5"/><rect x="13.5" y="3" width="7.5" height="4.5"/><rect x="13.5" y="11" width="7.5" height="10"/><rect x="3" y="14" width="7.5" height="7"/></svg>
+      <span>HOME</span>
+    </a>
+    <a class="dock-item" href="story-mode.html" data-dest="story-mode">
+      <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4.5h6a3 3 0 0 1 3 3v12a2.5 2.5 0 0 0-2.5-2.5H4z"/><path d="M20 4.5h-6a3 3 0 0 0-3 3v12a2.5 2.5 0 0 1 2.5-2.5H20z"/></svg>
+      <span>STORY</span>
+    </a>
+    <a class="dock-item" href="missions.html" data-dest="missions">
+      <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="4.5"/><circle cx="12" cy="12" r="1"/></svg>
+      <span>MISSIONS</span>
+    </a>
+    <a class="dock-item" href="learning-lab.html" data-dest="learning-lab">
+      <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6"/><path d="M10 3v6.2L5.5 17A2.5 2.5 0 0 0 7.7 21h8.6a2.5 2.5 0 0 0 2.2-4L14 9.2V3"/><path d="M7.5 14h9"/></svg>
+      <span>LAB</span>
+    </a>
+    <a class="dock-item" href="hq.html" data-dest="hq">
+      <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V9.5L12 4l8 5.5V21"/><path d="M9.5 21v-6h5v6"/></svg>
+      <span>HQ</span>
+    </a>
+  </nav>
+  <script src="assets/js/site.js" type="module"></script>
+</body>
+</html>
